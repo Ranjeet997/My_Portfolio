@@ -1,27 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+    .bTop {
+        @apply border-t-[1px] border-t-zinc-800;
+    }
+    .bBottom {
+        @apply border-b-[1px] border-b-zinc-800;
+    }
+    .bLeft {
+        @apply border-l-[1px] border-l-zinc-800;
+    }
+    .bRight {
+        @apply border-r-[1px] border-r-zinc-800;
+    }
+    .bAll {
+        @apply border-[1px] border-zinc-800;
+    }
+    
+    /* ======================== About Me Start ====================== */
+    .abouutRightLi {
+        @apply text-zinc-400 text-sm lg:text-base font-normal flex justify-between items-center border-b-[1px] border-gray-800 py-2
+    }
+    .aboutRightSpan {
+        @apply bg-dColor text-black uppercase px-4 py-[1px] rounded-md;
+    }
+    .sideNavLi {
+        @apply text-tColor border-b-[1px] border-b-zinc-500 py-4 text-sm md:text-base hover:text-dColor duration-300
+    }
+    
 }
